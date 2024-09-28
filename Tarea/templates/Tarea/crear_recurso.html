@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Crear Recurso</title>
+</head>
+<body>
+    {% extends "base_generic.html" %}
+    {% block content %}
+    <h2>Crear Recurso</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'listar_recursos' %}">Volver a la lista</a>
+    {% endblock %}
+</body>
+</html>
